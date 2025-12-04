@@ -13,8 +13,8 @@ model User {
   password  String
   name      String?
   age       Int?
-  height    Int?   // cm
-  weight    Float? // kg
+  height    Int?     // cm
+  weight    Float?   // kg
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -38,12 +38,12 @@ model Measurement {
 }
 
 model Exercise {
-  id          Int      @id @default(autoincrement())
-  externalId  String   @unique // ID de la API GymFit
-  name        String
-  muscle      String?
-  equipment   String?
-  difficulty  String?
+  id           Int      @id @default(autoincrement())
+  externalId   String   @unique
+  name         String
+  muscle       String?
+  equipment    String?
+  difficulty   String?
   instructions String?
 }
 
